@@ -12,6 +12,7 @@ import config from "./src/configs/index.js"
 import Router from "./src/routes/index.js"
 
 dotenv.config()
+config.dbConnection()
 const app = express()
 
 app.use(cors(config.env.ALLOW_CORS))
@@ -20,7 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // routes
-app.use(Router)
+app.use("/api", Router)
 
 // 404 handle
 app.use((req, res, next) => {

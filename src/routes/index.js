@@ -7,6 +7,7 @@ import Controllers from "../controllers/index.js"
 
 const router = express.Router()
 
-router.get("/", Controllers.getHelloWolrd)
+router.post("/find-contact", Controllers.findNumber)
+router.post("/mark-contact", Controllers.markContact)
 
 export default router
