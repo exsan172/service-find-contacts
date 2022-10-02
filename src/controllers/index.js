@@ -7,7 +7,7 @@ import config from "../configs/index.js"
 export default {
     getHelloWolrd: async (req, res, next) => {
         try {
-            config.response(res, 200, "Hello wolrd!", [
+            config.response(res, 200, null, [
                 {
                     name : "jhon",
                     address : "jakarta",
